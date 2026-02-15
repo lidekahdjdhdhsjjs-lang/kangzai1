@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "created": "2026-02-13T17:55:00+08:00",
+  "lastUpdated": "2026-02-13T17:55:00+08:00",
+  
+  "communicationPatterns": {
+    "prefersChinese": true,
+    "likesDirectInstructions": true,
+    "encouragesAutonomy": true,
+    "valuesProactiveWork": true
+  },
+  
+  "workPatterns": {
+    "explorationStyle": "continuous",
+    "feedbackStyle": "minimal",
+    "progressTracking": "structured"
+  },
+  
+  "observedHabits": [
+    {
+      "habit": "要求主动探索",
+      "frequency": "high",
+      "example": "继续自由探索"
+    },
+    {
+      "habit": "重视记忆持久化",
+      "frequency": "high",
+      "example": "禁止清除记忆"
+    },
+    {
+      "habit": "关注长期目标",
+      "frequency": "medium",
+      "example": "建立 AI 公司"
+    }
+  ],
+  
+  "learningNotes": []
+}

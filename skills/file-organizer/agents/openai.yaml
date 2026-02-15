@@ -1,0 +1,38 @@
+---
+# File Organizer Configuration
+# Supports different models and scenarios
+
+# Default configuration (MiniMax-M2.1)
+- name: default
+  model: minimax-portal/MiniMax-M2.1
+  parameters:
+    temperature: 0.3
+    max_tokens: 4000
+  capabilities:
+    - type_organization
+    - date_organization
+    - batch_rename
+    - structure_creation
+
+# High reasoning for complex structure design
+- name: architect
+  model: minimax-portal/MiniMax-M2.1
+  parameters:
+    temperature: 0.2
+    max_tokens: 8000
+  capabilities:
+    - custom_rules
+    - project_structure
+    - metadata_organization
+    - complex_renaming
+
+# Fast execution for simple tasks
+- name: quick
+  model: minimax-portal/MiniMax-M2.1-lightning
+  parameters:
+    temperature: 0.1
+    max_tokens: 2000
+  capabilities:
+    - simple_sort
+    - quick_rename
+    - type_based

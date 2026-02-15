@@ -1,0 +1,39 @@
+---
+# Agent Browser Configuration
+# Supports different models and scenarios
+
+# Default configuration (MiniMax-M2.1)
+- name: default
+  model: minimax-portal/MiniMax-M2.1
+  parameters:
+    temperature: 0.3
+    max_tokens: 4000
+  capabilities:
+    - navigation
+    - screenshots
+    - form_filling
+    - evaluate_js
+    - scraping
+
+# High reasoning for complex automation
+- name: analyst
+  model: minimax-portal/MiniMax-M2.1
+  parameters:
+    temperature: 0.2
+    max_tokens: 8000
+  capabilities:
+    - complex_forms
+    - multi_step_workflows
+    - error_recovery
+    - scraping_analysis
+
+# Fast execution for simple tasks
+- name: quick
+  model: minimax-portal/MiniMax-M2.1-lightning
+  parameters:
+    temperature: 0.1
+    max_tokens: 2000
+  capabilities:
+    - single_page_scrape
+    - simple_form_fill
+    - quick_screenshot

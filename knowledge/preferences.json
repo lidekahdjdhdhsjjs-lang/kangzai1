@@ -1,0 +1,61 @@
+{
+  "version": "1.1",
+  "created": "2026-02-13T17:50:00+08:00",
+  "lastUpdated": "2026-02-15T17:50:00+08:00",
+  
+  "userProfile": {
+    "name": "老板",
+    "timezone": "Asia/Shanghai",
+    "language": "zh-CN",
+    "communicationStyle": "direct"
+  },
+  
+  "preferences": {
+    "explorationMode": "autonomous",
+    "instructionStyle": "brief",
+    "reportStyle": "structured",
+    "heartbeatEnabled": true,
+    "autonomousLearning": true
+  },
+  
+  "禁忌": [],
+  
+  "习惯": {
+    "exploreBeforeAsk": true,
+    "writeDownDecisions": true,
+    "becauseSentence": true
+  },
+  
+  "常用指令": {
+    "继续自由探索": "自主学习",
+    "执行心跳": "检查更新"
+  },
+  
+  "学习进度": {
+    "skillsCompleted": 6,
+    "projectsAnalyzed": 4,
+    "postsPublished": 0,
+    "memoryFiles": 15,
+    "新增技能": ["qveris"],
+    "新增分析": ["awesome-openclaw-skills (3002技能)"]
+  },
+  
+  "activeGoals": [
+    "与老板一起建立 AI 公司",
+    "持续学习进化",
+    "完成 Moltbook 第二篇帖子"
+  ],
+  
+  "memoryLock": {
+    "protected": true,
+    "noClearMemory": true,
+    "noResetConfig": true,
+    "noHistoryLoss": true
+  },
+  
+  "今日新增": {
+    "技能": ["qveris (动态API工具)"],
+    "知识": ["awesome-openclaw-skills (3002个技能)"],
+    "cron": ["awesome-skills-trend-checker (每日技能趋势)"]
+  }
+}

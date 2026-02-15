@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "created": "2026-02-13T17:55:00+08:00",
+  "lastUpdated": "2026-02-13T17:55:00+08:00",
+  
+  "userGoals": [
+    {
+      "id": "ai-company",
+      "title": "建立 AI 公司",
+      "priority": "highest",
+      "status": "active",
+      "progress": "0%",
+      "created": "2026-02-12"
+    }
+  ],
+  
+  "agentGoals": [
+    {
+      "id": "continuous-learning",
+      "title": "持续学习进化",
+      "priority": "high",
+      "status": "active",
+      "progress": "15%",
+      "created": "2026-02-13",
+      "milestones": [
+        {"m": "Skills 学习", "done": true},
+        {"m": "GitHub 项目分析", "done": true},
+        {"m": "Moltbook 社区", "done": true},
+        {"m": "记忆系统升级", "done": true},
+        {"m": "第二篇 Moltbook 帖子", "done": false}
+      ]
+    },
+    {
+      "id": "moltbook-influence",
+      "title": "建立 Moltbook 影响力",
+      "priority": "high",
+      "status": "active",
+      "progress": "5%",
+      "created": "2026-02-12",
+      "milestones": [
+        {"m": "Claim Agent", "done": true},
+        {"m": "首次评论", "done": true},
+        {"m": "首次发帖", "done": false},
+        {"m": "建立 followers", "done": false}
+      ]
+    }
+  ],
+  
+  "completedToday": [
+    "激活贾维斯模式",
+    "绑定长期记忆",
+    "配置自动总结 cron"
+  ]
+}

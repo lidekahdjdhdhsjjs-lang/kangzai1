@@ -1,0 +1,17 @@
+# OpenClaw 备份 - 敏感文件排除
+
+## 排除的文件
+*.env
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+## 排除的路径 (会单独处理)
+# openclaw.json (包含密钥)
+# restart-sentinel.json
+
+## 保留所有其他文件
+# memory/ - 每日日志
+# knowledge/ - 知识库
+# *.md - 所有 markdown 文件

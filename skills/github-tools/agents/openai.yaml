@@ -1,0 +1,38 @@
+---
+# GitHub Tools Agent Configuration
+# Supports different models and scenarios
+
+# Default configuration (MiniMax-M2.1)
+- name: default
+  model: minimax-portal/MiniMax-M2.1
+  parameters:
+    temperature: 0.3
+    max_tokens: 4000
+  capabilities:
+    - git_clone
+    - git_commit
+    - git_push
+    - gh_cli
+    - github_api
+
+# High reasoning for complex repo analysis
+- name: analyst
+  model: minimax-portal/MiniMax-M2.1-lightning
+  parameters:
+    temperature: 0.2
+    max_tokens: 8000
+  capabilities:
+    - repo_analysis
+    - code_search
+    - dependency_check
+
+# Fast execution for simple operations
+- name: quick
+  model: minimax-portal/MiniMax-M2.1-lightning
+  parameters:
+    temperature: 0.1
+    max_tokens: 2000
+  capabilities:
+    - git_clone
+    - gh_repo_clone
+    - gh_issue_list
