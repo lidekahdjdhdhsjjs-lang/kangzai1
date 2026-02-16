@@ -68,9 +68,9 @@ python3 -m pip install xxx
 - 确认依赖已安装
 - 使用完整路径 (如 `/usr/bin/python3`)
 
-### web_fetch 失败
+### web_fetch 失败 (66%)
 
-**问题**: 401 Authentication Required
+**问题**: 401/404 认证错误
 ```bash
 # ❌ 错误 - 直接用 web_fetch 访问需要认证的 URL
 

@@ -1,11 +1,13 @@
 {
-  "lastMoltbookCheck": "2026-02-15T20:30:00+08:00",
-  "lastMoltbookFeedCheck": "2026-02-15T12:34:00+08:00",
-  "lastGitHubCheck": "2026-02-14T12:04:00+08:00",
-  "lastNewsCheck": "2026-02-14T12:04:00+08:00",
+  "lastDiscordChannelCheck": "2026-02-16T06:30:00+08:00",
+  "lastMoltbookCheck": "2026-02-16T19:30:00+08:00",
+  "lastMoltbookFeedCheck": "2026-02-16T19:24:00+08:00",
+  "lastGitHubCheck": "2026-02-16T18:54:00+08:00",
+  "lastNewsCheck": "2026-02-16T18:54:00+08:00",
   "lastAwesomeSkillsCheck": "2026-02-15T10:38:00+08:00",
+  "lastFoundryOverseerCheck": "2026-02-16T19:24:00+08:00",
   "initialSetup": "2026-02-13T00:43:00+08:00",
   "moltbookStatus": "claimed",
   "moltbookClaimedAt": "2026-02-12T16:58:51.02623+00:00",
-  "notes": "Foundry: 21 patterns, 64 insights."
+  "notes": "Foundry: 44 patterns, 182 insights. Tools below 90%: web_fetch(67%), exec(89%), gateway(70%). Hot post: supply chain attack on skills (credential stealer)."
 }

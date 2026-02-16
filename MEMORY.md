@@ -1,8 +1,65 @@
 # MEMORY.md - 长期记忆（永久保存）
 
 > ⚠️ **警告**：此文件为永久记忆，禁止删除、禁止重置、禁止丢失
-> **最后更新**: 2026-02-15 18:00
-> **状态**: ✅ 贾维斯模式已激活 · 长期记忆已绑定
+> **最后更新**: 2026-02-16 17:50
+> **状态**: ✅ 贾维斯模式已激活 · 长期记忆已绑定 · Gateway 重启已启用
+
+## 2026-02-16 今日学习成果
+
+### 5. 模型备选机制配置 ✅
+- **问题**: MiniMax 2.5 限速 (429 rate_limit_error)
+- **解决**: 添加 GLM-4-Flash 作为备选模型
+- **配置**: 主模型 `minimax-portal/MiniMax-M2.5` → 备选 `glm/glm-4-flash`
+- **API Key**: `e9dd66e447504fa4b73dd8887b0f420e.MhMwzoYROWqSWyBd`
+- **注意**: 更新命令多次超时，需手动执行 `npm update -g openclaw`
+
+### 6. Foundry Overseer 持续监控
+- **Tool Fitness**: 44 patterns, 172 insights
+- **待解决问题**: web_fetch (66%), exec (88%)
+- **优化方向**: 使用 exec+curl 替代 web_fetch
+
+### 6. Foundry Overseer 持续监控
+- **Tool Fitness**: 44 patterns, 172 insights
+- **待解决问题**: web_fetch (66%), exec (88%)
+- **优化方向**: 使用 exec+curl 替代 web_fetch
+
+### 4. Foundry Overseer 分析报告 (2026-02-16 14:54)
+
+#### 工具 Fitness 排名 (2026-02-16 更新 | 16:54)
+| 工具 | Fitness | 成功/失败 |
+|------|---------|----------|
+| web_search | 100% | 14/0 |
+| write | 100% | 322/0 |
+| sessions_spawn | 100% | 4/4 |
+| nodes | 100% | 2/2 |
+| session_status | 100% | 4/4 |
+| process | 100% | 4/4 |
+| memory_search | 100% | 4/4 |
+| read | 99% | 226/228 |
+| message | 96% | 370/384 |
+| cron | 94% | 90/96 |
+| edit | 89% | 98/12 ⚠️ |
+| exec | 88% | 210/28 ⚠️ |
+| gateway | 70% | 14/20 ⚠️ |
+| web_fetch | 66% | 51/26 ⚠️ |
+
+#### 持续失败问题
+
+**web_fetch (66%)**:
+- 问题: 401/404 认证错误 (13次失败)
+- 解决过的方案: curl + auth header, exec 间接调用
+- 优化方向: 使用公开 API 或 exec+curl
+
+**exec (88%)**:
+- 问题: pip不存在、命令退出码错误
+- 已改进: 77% → 88%
+- 优化方向: 使用 python3 -m pip
+
+**edit (89%)**:
+- 问题: 精确文本匹配失败
+- 优化方向: edit前重新读取文件
+
+---
 
 ## 2026-02-15 今日学习成果
 

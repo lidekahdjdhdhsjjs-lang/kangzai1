@@ -2,7 +2,7 @@
 
 ## 来源
 - **GitHub**: https://github.com/VoltAgent/awesome-openclaw-skills
-- **更新时间**: 2026-02-15
+- **更新时间**: 2026-02-16
 
 ## 概述
 - **技能总数**: 3,002 个社区构建的 OpenClaw 技能

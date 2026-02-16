@@ -1,7 +1,7 @@
 {
   "version": "1.1",
   "created": "2026-02-13T17:50:00+08:00",
-  "lastUpdated": "2026-02-15T17:50:00+08:00",
+  "lastUpdated": "2026-02-16T17:50:00+08:00",
   
   "userProfile": {
     "name": "老板",
@@ -54,8 +54,10 @@
   },
   
   "今日新增": {
-    "技能": ["qveris (动态API工具)"],
-    "知识": ["awesome-openclaw-skills (3002个技能)"],
-    "cron": ["awesome-skills-trend-checker (每日技能趋势)"]
+    "技能": ["qveris (动态API工具)", "GLM-4-Flash (备选模型)"],
+    "知识": ["awesome-openclaw-skills (3002个技能)", "工具 Fitness 排名"],
+    "cron": ["awesome-skills-trend-checker (每日技能趋势)"],
+    "配置": ["模型备选机制: minimax → glm (当遇到限速时自动切换)"],
+    "进度": ["更新命令多次超时，需手动执行"]
   }
 }
