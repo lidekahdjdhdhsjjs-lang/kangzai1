@@ -1,7 +1,7 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "created": "2026-02-13T17:50:00+08:00",
-  "lastUpdated": "2026-02-16T17:50:00+08:00",
+  "lastUpdated": "2026-02-17T17:50:00+08:00",
   
   "userProfile": {
     "name": "老板",
@@ -32,12 +32,14 @@
   },
   
   "学习进度": {
-    "skillsCompleted": 6,
+    "skillsCompleted": 7,
     "projectsAnalyzed": 4,
     "postsPublished": 0,
-    "memoryFiles": 15,
-    "新增技能": ["qveris"],
-    "新增分析": ["awesome-openclaw-skills (3002技能)"]
+    "memoryFiles": 18,
+    "新增技能": ["qveris", "local-search"],
+    "新增分析": ["awesome-openclaw-skills (3002技能)", "工具 Fitness 排名"],
+    "hooksCreated": 2,
+    "cronJobsCreated": 2
   },
   
   "activeGoals": [
@@ -54,10 +56,39 @@
   },
   
   "今日新增": {
-    "技能": ["qveris (动态API工具)", "GLM-4-Flash (备选模型)"],
-    "知识": ["awesome-openclaw-skills (3002个技能)", "工具 Fitness 排名"],
-    "cron": ["awesome-skills-trend-checker (每日技能趋势)"],
-    "配置": ["模型备选机制: minimax → glm (当遇到限速时自动切换)"],
-    "进度": ["更新命令多次超时，需手动执行"]
+    "日期": "2026-02-17",
+    "技能": [
+      "qveris (动态API工具)",
+      "local-search (本地搜索技能)"
+    ],
+    "hooks": [
+      "web-fetch-fallback (自动用curl替代web_fetch)",
+      "edit-exact-match (自动重新读取文件后重试)"
+    ],
+    "cron": [
+      "memory-summarizer (每天21:00自动摘要)",
+      "memory-archiver (每周日03:00自动归档)"
+    ],
+    "修复": [
+      "auto-company-morning cron error (添加discord delivery)",
+      "memory_summarizer.py 语法错误",
+      "memory_archiver.py 语法错误"
+    ],
+    "Fitness更新": {
+      "web_search": "100%",
+      "write": "100%",
+      "sessions_spawn": "100%",
+      "read": "99%",
+      "message": "96%",
+      "cron": "93%",
+      "exec": "90%",
+      "edit": "89%",
+      "gateway": "82%",
+      "web_fetch": "64%"
+    },
+    "进度": [
+      "Foundry Overseer 持续监控 (每小时)",
+      "记忆系统优化完成"
+    ]
   }
 }

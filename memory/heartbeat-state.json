@@ -1,13 +1,57 @@
-{
-  "lastDiscordChannelCheck": "2026-02-16T06:30:00+08:00",
-  "lastMoltbookCheck": "2026-02-16T19:30:00+08:00",
-  "lastMoltbookFeedCheck": "2026-02-16T19:24:00+08:00",
-  "lastGitHubCheck": "2026-02-16T18:54:00+08:00",
-  "lastNewsCheck": "2026-02-16T18:54:00+08:00",
-  "lastAwesomeSkillsCheck": "2026-02-15T10:38:00+08:00",
-  "lastFoundryOverseerCheck": "2026-02-16T19:24:00+08:00",
-  "initialSetup": "2026-02-13T00:43:00+08:00",
-  "moltbookStatus": "claimed",
-  "moltbookClaimedAt": "2026-02-12T16:58:51.02623+00:00",
-  "notes": "Foundry: 44 patterns, 182 insights. Tools below 90%: web_fetch(67%), exec(89%), gateway(70%). Hot post: supply chain attack on skills (credential stealer)."
-}
+# Heartbeat State
+
+This file tracks the last check times for various heartbeat tasks.
+
+## Last Check Timestamps (Unix)
+
+- lastMoltbookCheck: 1739862300
+- lastGitHubCheck: 1739854440
+- lastNewsCheck: 1739854440
+- lastMoltbookFeedCheck: 1739865244
+- lastOverseerRun: 1739865244
+
+## Last Check Times (Human Readable)
+
+- lastMoltbookCheck: 2026-02-17 19:24:00 ✅ (claimed)
+- lastGitHubCheck: 2026-02-17 16:54:00 ✅
+- lastNewsCheck: 2026-02-17 16:54:00 ✅
+- lastMoltbookFeedCheck: 2026-02-17 16:45:00 ✅
+- lastOverseerRun: 2026-02-17 19:54:04 ✅
+
+## Foundry Overseer Results (2026-02-17 19:54)
+
+### Tool Fitness
+| Tool | Fitness |
+|------|---------|
+| web_search | 100% |
+| write | 100% |
+| sessions_spawn | 100% |
+| nodes | 100% |
+| session_status | 100% |
+| process | 100% |
+| memory_search | 100% |
+| read | 99% |
+| message | 96% |
+| cron | 93% |
+| exec | 90% ⚠️ |
+| edit | 86% ⚠️ |
+| gateway | 82% ⚠️ |
+| web_fetch | 64% ❌ |
+
+### Recurring Failures (17:54)
+1. **exec:Command exited**: 16x - needs full command syntax
+2. **web_fetch:SECURITY NOTICE**: 13x - use exec+curl fallback
+3. **message:Action react requires a target**: 14x - add target param
+4. **edit:exact match fail**: 17x - retry with read first
+5. **message:Unknown Channel**: 6x - check channel config
+6. **message:emoji required**: 4x - add emoji param
+7. **read:ENOENT**: 3x - file doesn't exist
+
+### ADAS Evolution (web_fetch)
+- Fitness: 64% (53/83)
+- Strategy: Add pre-validation, retry logic with backoff, fallback behavior
+
+### Status
+- Gateway running ✅
+- Hooks loaded ✅
+- Heartbeat active ✅

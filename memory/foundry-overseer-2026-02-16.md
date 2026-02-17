@@ -1,44 +1,32 @@
-# Foundry Overseer Report (2026-02-16 18:54)
+# Foundry Overseer Report - 2026-02-16 18:54
 
-**Generated**: 2026-02-16T10:54:26.672Z
+**Patterns analyzed**: 53
 
-### Tool Fitness 排名
+## Tool Fitness
 
-| 工具 | Fitness | 成功/失败 |
-|------|---------|----------|
-| web_search | 100% | 14/14 |
-| write | 100% | 332/332 |
-| sessions_spawn | 100% | 4/4 |
-| nodes | 100% | 2/2 |
-| session_status | 100% | 4/4 |
-| process | 100% | 4/4 |
-| memory_search | 100% | 4/4 |
-| read | 99% | 244/246 |
-| message | 97% | 416/430 |
-| cron | 94% | 90/96 |
-| **exec** | **89%** ⚠️ | 222/28 |
-| **web_fetch** | **66%** ⚠️ | 51/26 |
-| **gateway** | **70%** ⚠️ | 14/6 |
+| 工具 | Fitness | 成功/失败 | 状态 |
+|------|---------|----------|------|
+| web_search | 100% | 20/20 | ✅ |
+| write | 100% | 394/394 | ✅ |
+| sessions_spawn | 100% | 4/4 | ✅ |
+| nodes | 100% | 2/2 | ✅ |
+| session_status | 100% | 4/4 | ✅ |
+| process | 100% | 4/4 | ✅ |
+| memory_search | 100% | 4/4 | ✅ |
+| read | 98% | 334/340 | ✅ |
+| message | 97% | 606/624 | ✅ |
+| cron | 94% | 92/98 | ✅ |
 
-### 持续失败问题
+## Recurring Failures (待解决)
 
-**web_fetch (66%)**:
-- 问题: 401/404 认证错误 (13次失败)
-- 解决: 重试后成功
-- 优化方向: 使用 exec+curl 替代 web_fetch
+| 失败 | 次数 | 状态 |
+|------|------|------|
+| exec:Command exited with code N | 5 | ⚠️ 已记录 insight |
+| web_fetch: SECURITY NOTICE | 13 | ⚠️ 已记录 insight |
+| edit: exact text not found | 10 | ⚠️ 已记录 insight |
+| read: ENOENT | 3 | ⚠️ 已记录 insight |
 
-**exec (89%)**:
-- 问题: 命令退出码错误、pip 不存在、gh 命令找不到
-- 解决: 重试后成功
-- 优化方向: 使用 python3 -m pip
+## Actions
 
-**gateway (70%)**:
-- 问题: invalid config、restart 被禁用
-- 解决: 重试后成功
-- 优化方向: 配置 commands.restart=true
-
-### ADAS Evolution 建议
-
-1. web_fetch: 添加重试逻辑、预验证
-2. exec: 添加预验证、改进错误信息
-3. gateway: 添加配置验证
+- ✅ Created insights for all recurring failures
+- ✅ foundry_evolve: No tools below 50% fitness threshold

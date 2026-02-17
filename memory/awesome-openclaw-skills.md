@@ -2,10 +2,12 @@
 
 ## 来源
 - **GitHub**: https://github.com/VoltAgent/awesome-openclaw-skills
-- **更新时间**: 2026-02-16
+- **更新时间**: 2026-02-17
 
 ## 概述
 - **技能总数**: 3,002 个社区构建的 OpenClaw 技能
+- **Stars**: 15,880 ⭐
+- **Forks**: 1,600
 - **来源**: ClawHub (OpenClaw 官方技能注册表)
 - **分类**: 30 个类别
 
@@ -49,8 +51,8 @@
 - Self-Hosted & Automation (25)
 - Apple Apps & Services (35)
 - iOS & macOS Development (17)
-- Security & Passwords (63)
-- Transportation (73)
+- Security & Passwords (64)
+- Transportation (72)
 - Gaming (61)
 - Clawdbot Tools (120)
 - Personal Development (56)
