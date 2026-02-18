@@ -720,3 +720,19 @@ skill-name/
 ## 待解决失败模式
 ## 洞察
 - - 已创建 2 个新洞察 (exec, web_fetch 失败模式)
+
+### 2026-02-17 自动摘要
+## Tool Fitness
+- | web_search | 100% | ✅ |
+- | write | 100% | ✅ |
+- | sessions_spawn | 100% | ✅ |
+- | nodes | 100% | ✅ |
+- | session_status | 100% | ✅ |
+- | process | 100% | ✅ |
+- | memory_search | 100% | ✅ |
+- | read | 99% | ✅ |
+- | message | 96% | ✅ |
+- | cron | 93% | ✅ |
+- | web_fetch | 64% ❌ | 需用curl替代 |
+## 持续失败问题
+## ADAS 进化目标
