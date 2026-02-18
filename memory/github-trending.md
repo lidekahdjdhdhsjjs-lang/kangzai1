@@ -1,25 +1,25 @@
-# GitHub Trending - 2026-02-17
+# GitHub Trending - 2026-02-18
 
-## AI/Agent Projects (Weekly)
+## Python 热门项目 (Weekly)
 
-### Top Python Repos
-1. **vercel-labs/agent-browser** ⭐14,278 - Browser automation CLI for AI agents
-2. **snarktank/ralph** ⭐10,490 - Autonomous AI agent loop for PRD completion
-3. **sickn33/antigravity-awesome-skills** ⭐10,428 - 800+ Agentic Skills for Claude Code
-4. **coreyhaines31/marketingskills** ⭐8,035 - Marketing skills for AI agents
-5. **BlockRunAI/ClawRouter** ⭐2,653 - Agent-native LLM router for OpenClaw
-6. **entireio/cli** ⭐2,557 - AI agent session capture on git push
-7. **benjitaylor/agentation** ⭐2,197 - Visual feedback tool for agents
-8. **volcengine/OpenViking** ⭐1,890 - Open-source context database for AI Agents
-9. **AvdLee/SwiftUI-Agent-Skill** ⭐1,508 - SwiftUI Best Practices for AI coding tools
-10. **supabase/agent-skills** ⭐1,343 - Supabase skills for AI agents
+### Top 10
+1. **Jeffallan/claude-skills** - 66个全栈开发者专用技能
+2. **google/langextract** - 从非结构化文本提取结构化信息
+3. **p-e-w/heretic** - 自动审查移除
+4. **hsliuping/TradingAgents-CN** - 中文金融交易多智能体框架
+5. **ruvnet/wifi-densepose** - WiFi人体姿态估计 (6954 stars)
+6. **HKUDS/RAG-Anything** - 全合一RAG框架
+7. **karpathy/nanochat** - $100最强ChatGPT
+8. **unslothai/unsloth** - LLM微调训练 (2x快, 70%少显存)
+9. **hummingbot/hummingbot** - 加密交易机器人
+10. **cheahjs/free-llm-api-resources** - 免费LLM API资源
 
-### Key Trends
-- **Agent Browser**: Vercel's agent-browser leads with 14k+ stars
-- **Skills Economy**: Antigravity awesome-skills shows demand for pre-built skills
-- **Marketing Skills**: New category emerging for AI agents
-- **OpenClaw**: ClawRouter shows ecosystem growth
-- **Context Management**: OpenViking addresses context DB needs
+### 值得关注
+- **karpathy/nanoGPT** - 最简单GPT训练库
+- **coleam00/context-engineization-intro** - AI编程上下文工程
+- **THUDM/slime** - LLM RL训练框架
+- **anthropics/claude-quickstarts** - Claude快速入门项目
+- **TEN-framework/ten-framework** - 对话式语音AI框架
 
 ---
-*Updated: 2026-02-17 16:54*
+*数据来源: GitHub Trending (2026-02-18)*

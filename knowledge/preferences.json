@@ -1,7 +1,7 @@
 {
   "version": "1.2",
   "created": "2026-02-13T17:50:00+08:00",
-  "lastUpdated": "2026-02-17T17:50:00+08:00",
+  "lastUpdated": "2026-02-18T17:50:00+08:00",
   
   "userProfile": {
     "name": "老板",
@@ -56,23 +56,46 @@
   },
   
   "今日新增": {
+    "日期": "2026-02-18",
+    "更新": [
+      "OpenClaw 2.12 → 2.17",
+      "SOUL.md 重写 - 更有个性，不再是公司风格"
+    ],
+    "hooks": [
+      "message-messageId-required (已创建)",
+      "message-emoji-required (已创建)",
+      "message-react-target (已创建)",
+      "edit-pre-read (已创建)"
+    ],
+    "Fitness变化": {
+      "web_search": "100%",
+      "write": "100%",
+      "message": "96%",
+      "cron": "95%",
+      "exec": "93%",
+      "edit": "87%",
+      "web_fetch": "65%",
+      "browser": "50%"
+    },
+    "待处理": [
+      "Hook 需要 gateway 重启激活",
+      "Moltbook API 限流 (401/403)",
+      "MiniMax 限速中"
+    ]
+  },
+  "昨日新增": {
     "日期": "2026-02-17",
     "技能": [
       "qveris (动态API工具)",
       "local-search (本地搜索技能)"
     ],
     "hooks": [
-      "web-fetch-fallback (自动用curl替代web_fetch)",
-      "edit-exact-match (自动重新读取文件后重试)"
+      "web-fetch-fallback",
+      "edit-exact-match"
     ],
     "cron": [
-      "memory-summarizer (每天21:00自动摘要)",
-      "memory-archiver (每周日03:00自动归档)"
-    ],
-    "修复": [
-      "auto-company-morning cron error (添加discord delivery)",
-      "memory_summarizer.py 语法错误",
-      "memory_archiver.py 语法错误"
+      "memory-summarizer (每天21:00)",
+      "memory-archiver (每周日03:00)"
     ],
     "Fitness更新": {
       "web_search": "100%",
@@ -85,10 +108,6 @@
       "edit": "89%",
       "gateway": "82%",
       "web_fetch": "64%"
-    },
-    "进度": [
-      "Foundry Overseer 持续监控 (每小时)",
-      "记忆系统优化完成"
-    ]
+    }
   }
 }

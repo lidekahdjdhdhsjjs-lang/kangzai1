@@ -2,16 +2,18 @@
 
 > 记录值得安装的新技能（来自 awesome-openclaw-skills 趋势检查）
 
-## 2026-02-17 趋势检查结果
+## 2026-02-18 趋势检查结果
 
-**检查时间**: 2026-02-17 10:38
-**结论**: 细微变化 (1个技能从 Transportation 调整到 Security & Passwords)
+**检查时间**: 2026-02-18 10:38
+**结论**: 社区活跃度提升 (Stars +419, Forks +45 过去7天)
 
 | 指标 | 数值 | 变化 |
 |------|------|------|
 | 技能总数 | 3,002 | - |
 | 类别数 | 30 | - |
-| Stars | 15,880 | + |
+| Stars | 16,299 | +419 |
+| Forks | 1,645 | +45 |
+| 最后更新 | 2026-02-18T02:37:23Z | - |
 
 **热门类别 Top 5**:
 1. AI & LLMs - 287
@@ -21,14 +23,26 @@
 5. Browser & Automation - 139
 
 **新发现有趣技能**:
-- `cellcog` - #1 on DeepResearch Bench (Feb 2026)
-- `evolver` - A self-evolution engine for AI agents
-- `joko-orchestrator` - Deterministically coordinates autonomous planning
-- `cognitive-memory` - Intelligent multi-store memory system (已在关注列表)
+- `cellcog` - #1 on DeepResearch Bench (Feb 2026) 🔥
+- `evolver` - A self-evolution engine for AI agents (自进化引擎)
+- `mcp-builder` - 创建高质量 MCP 服务器指南
+- `joko-orchestrator` - 确定性自主规划协调
+- `cognitive-memory` - 多存储记忆系统
+
+**分析**:
+- 社区活跃度持续上升 (+419 stars/week)
+- AI/LLM 类别持续最热门 (287个技能)
+- 自进化/记忆系统是当前热点方向
 
 ---
 
 ## 历史记录
+
+### 2026-02-17
+- 技能总数: 3,002
+- 类别数: 30
+- Stars: 15,880
+- 结论: 细微变化 (1个技能从 Transportation 调整到 Security & Passwords)
 
 ### 2026-02-16
 - 技能总数: 3,002

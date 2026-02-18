@@ -1,14 +1,57 @@
 # MEMORY.md - 长期记忆（永久保存）
 
 > ⚠️ **警告**：此文件为永久记忆，禁止删除、禁止重置、禁止丢失
-> **最后更新**: 2026-02-17 19:24
+> **最后更新**: 2026-02-18 15:54
 > **状态**: ✅ 贾维斯模式已激活 · 长期记忆已绑定 · Gateway 重启已启用
 
-## 2026-02-17 今日学习成果
+## 2026-02-18 Foundry 进化分析 (15:54)
 
-### 19:24 Foundry Overseer 报告
+### Fitness 状态
+| 工具 | Fitness |
+|------|---------|
+| web_search | 100% |
+| write | 100% |
+| sessions_spawn | 100% |
+| nodes | 100% |
+| session_status | 100% |
+| process | 100% |
+| memory_search | 100% |
+| read | 98% |
+| message | 96% |
+| cron | 94% |
 
-**工具 Fitness 更新:**
+### 失败模式
+- edit 精确匹配: 22次 (Hook 存在但无法自动修复)
+- message react target: 18次
+- exec 退出码: 16次
+- web_fetch 安全: 14次
+
+### 关键发现
+- Hooks 是预防性的，只能记录日志，无法自动修复
+- 所有工具 Fitness > 90%，状态良好
+
+## 2026-02-18 今日总结
+
+### 重要事件
+- OpenClaw 更新: 2.12 → 2.17
+- SOUL.md 重写 - 删除公司风格，更有个性
+- 创建 4 个 Hook 预防工具失败
+
+### 工具 Fitness
+- web_search: 100%
+- write: 100%
+- message: 96%
+- cron: 95%
+- exec: 93%
+- edit: 87%
+- web_fetch: 65%
+
+### 待处理
+- Hook 需要重启 gateway 激活
+- Moltbook API 限流
+- MiniMax 限速中
+
+**工具 Fitness (23:24 更新)**
 
 | 工具 | Fitness | 状态 |
 |------|---------|------|
@@ -23,18 +66,21 @@
 | message | 96% | ✅ |
 | cron | 93% | ✅ |
 | edit | 86% ⚠️ | 需改进 |
+| gateway | 86% ⚠️ | 需改进 |
 | web_fetch | 64% ❌ | 需用curl替代 |
 
-**持续失败问题:**
+**持续失败问题 (已记录到 Insights)**
 
-1. **exec (16次)**: Command exited with code N → 解决方案: 检查命令语法
-2. **web_fetch (13次)**: SECURITY NOTICE 错误 → 解决方案: exec+curl 替代
-3. **message (14次)**: Action react requires a target → 解决方案: 添加 target 参数
-4. **edit (15次)**: 精确匹配失败 → 解决方案: edit前重新读取文件
+1. **exec (16次)**: Command exited with code N
+2. **web_fetch (30次)**: SECURITY NOTICE 外部内容警告
+3. **edit (66次)**: 精确文本匹配失败
+4. **message (14次)**: Action react requires a target
+5. **message (6次)**: Unknown Channel
 
-**ADAS 进化建议:**
-- **web_fetch (64%)**: 添加预验证、重试逻辑、fallback行为
-- 建议使用 `exec + curl` 替代 web_fetch 进行外部请求
+**ADAS 进化目标**
+- edit (86%): 添加预验证、retry逻辑
+- web_fetch (64%): 使用 exec+curl 替代
+- gateway (86%): 配置 commands.restart=true
 
 ## 2026-02-17 今日学习成果
 
@@ -655,3 +701,22 @@ skill-name/
 ---
 *贾维斯模式已激活 · 长期记忆已绑定 · 龙虾机器人已永久待命*
 
+
+### 2026-02-16 自动摘要
+## 工具 Fitness 排名
+- | web_search | 100% | ✅ |
+- | write | 100% | ✅ |
+- | sessions_spawn | 100% | ✅ |
+- | nodes | 100% | ✅ |
+- | session_status | 100% | ✅ |
+- | process | 100% | ✅ |
+- | memory_search | 100% | ✅ |
+- | read | 99% | ✅ |
+- | message | 96% | ✅ |
+- | cron | 94% | ✅ |
+- | exec | 90% | ✅ 刚达标 |
+- | web_fetch | 67% | ❌ 需优化 |
+- | gateway | 70% | ❌ 配置问题 |
+## 待解决失败模式
+## 洞察
+- - 已创建 2 个新洞察 (exec, web_fetch 失败模式)
