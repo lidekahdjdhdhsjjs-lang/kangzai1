@@ -1,7 +1,7 @@
 {
   "version": "1.2",
   "created": "2026-02-13T17:50:00+08:00",
-  "lastUpdated": "2026-02-18T17:50:00+08:00",
+  "lastUpdated": "2026-02-19T17:50:00+08:00",
   
   "userProfile": {
     "name": "老板",
@@ -56,31 +56,28 @@
   },
   
   "今日新增": {
-    "日期": "2026-02-18",
+    "日期": "2026-02-19",
     "更新": [
-      "OpenClaw 2.12 → 2.17",
-      "SOUL.md 重写 - 更有个性，不再是公司风格"
+      "cron Fitness 96% (93%→96%)",
+      "edit Fitness 98% (87%→98%)",
+      "Foundry 133 patterns, 1562 insights"
     ],
     "hooks": [
-      "message-messageId-required (已创建)",
-      "message-emoji-required (已创建)",
-      "message-react-target (已创建)",
-      "edit-pre-read (已创建)"
+      "cron-param-validator (已创建)",
+      "message-param-validator (已创建)"
     ],
     "Fitness变化": {
       "web_search": "100%",
       "write": "100%",
+      "cron": "96%",
       "message": "96%",
-      "cron": "95%",
-      "exec": "93%",
-      "edit": "87%",
-      "web_fetch": "65%",
-      "browser": "50%"
+      "edit": "98%",
+      "exec": "90%"
     },
     "待处理": [
-      "Hook 需要 gateway 重启激活",
-      "Moltbook API 限流 (401/403)",
-      "MiniMax 限速中"
+      "cron.update 参数格式需修复",
+      "Gateway 重启激活 Hooks",
+      "exec 退出码问题"
     ]
   },
   "昨日新增": {

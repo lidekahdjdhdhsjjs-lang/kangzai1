@@ -1,7 +1,7 @@
 # Auto Company 共识记忆
 
 ## 当前周期
-2026-02-18
+2026-02-19
 
 ## 团队状态
 | 角色 | 状态 | 当前任务 |
@@ -27,22 +27,22 @@
 - [ ] Crystallize 2个新失败模式 ⏳
 - [ ] 精简 cron jobs（保留3个核心） ⏳
 - [ ] 完全淘汰 web_fetch ⏳
-- [ ] 更新 MEMORY.md ⏳
+- [ ] Gateway 重启激活 Hooks ⏳
 
 ## 决策记录
 - 2026-02-14: 决定采用 Auto Company 模式
 - 2026-02-17: 确立每日早会机制，聚焦工具效能优化
 - 2026-02-18: 新增 P0 优先级任务清单
+- 2026-02-19: 启动 cron 参数修复 + Crystallize 流程
 
 ## 今日共识
 | 项目 | 负责人 | 截止 | 状态 |
 |------|--------|------|------|
 | 执行 Foundry Overseer 分析 | 辉仔 | 09:30 | ✅ |
-| 创建 4 个预防性 Hooks | 辉仔 | 全天 | ✅ |
-| 工具 Fitness 分析 | 辉仔 | 18:00 | ✅ |
-| 修复 cron.update 参数格式 | 辉仔 | 明天 | ⏳ |
-| Crystallize 2个新失败模式 | 辉仔 | 明天 | ⏳ |
-| 精简 cron jobs | 辉仔 | 明天 | ⏳ |
+| 修复 cron.update 参数格式 | 辉仔 | 今天 | ⏳ |
+| Crystallize 2个新失败模式 | 辉仔 | 今天 | ⏳ |
+| 精简 cron jobs | 辉仔 | 今天 | ✅ |
+| Gateway 重启激活 Hooks | 辉仔 | 今天 | ⏳ |
 
 ## 问题诊断
 | 工具 | Fitness | 失败次数 | 解决方案 |
@@ -68,15 +68,13 @@
 
 ### P0-3: 精简 cron jobs
 保留核心 3 个：
-1. `foundry-overseer` - 每小时自进化分析
-2. `foundry-web-learning` - 每6小时互联网学习
-3. `auto-company-morning` - 每天09:00早会
+1. `foundry-overseer` - 每30分钟自进化分析
+2. `auto-company-morning` - 每天09:00早会
+3. `daily-memory-summary` - 每日记忆总结
 
-待删除/合并：
-- `auto-company-review` (整合到早会)
-- `awesome-skills-trend-checker` (合并到 web-learning)
-- `foundry-discord-interaction` (暂停)
+已删除：
 - `foundry-infinite-evolution` (合并到 overseer)
+- `auto-company-review` (合并到早会)
 
 ## 下一轮计划
 1. CEO 主导：推进 P0 任务清单
@@ -84,4 +82,4 @@
 3. DHH + 巴赫：执行精简和更新任务
 
 ---
-*Updated: 2026-02-18 18:00*
+*Updated: 2026-02-19 09:00*
