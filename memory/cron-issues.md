@@ -1,27 +1,29 @@
-# Cron Issues
+# Cron Issues Log
 
-## 2026-02-19 10:54
+## 2026-02-20
 
-### 需要关注的 Cron Jobs
+### auto-company-morning (ID: 5c2f1fa8-09b9-4ed5-8145-73b009e7e2bf)
 
-| Job | consecutiveErrors | 状态 | 备注 |
-|-----|-------------------|------|------|
-| auto-company-morning | 1 | ⚠️ | error: cron delivery target is missing |
+- **Error**: "cron delivery target is missing"
+- **Consecutive Errors**: 1
+- **Last Run**: 2026-02-18 09:00
+- **Status**: ⚠️ 需关注
 
-**说明**: 仅有 1 个错误，可能是临时问题。继续观察。
+**尝试修复**:
+- 2026-02-20 11:55: 更新 delivery 配置 → 无效
 
-### 已解决的问题
-- 所有其他 cron jobs consecutiveErrors = 0 ✅
+**可能原因**:
+- Discord channel ID 格式问题
+- delivery.to 字段解析失败
+
+**后续步骤**:
+- 监控 consecutiveErrors
+- 如果继续失败，考虑移除 delivery 配置改用 message 工具发送
+
+**2026-02-20 13:54 更新**:
+- consecutiveErrors: 1 (未增加)
+- 状态: 继续监控
+- 其他 cron jobs 全部健康 (consecutiveErrors = 0)
 
 ---
-## 2026-02-18 23:24
-
-### 需修复
-- 无
-
----
-## 2026-02-18 记录
-
-### 问题列表
-- cron:invalid params: 4次 (已创建 hook 记录)
-- message:Unknown Channel: 26次 (已创建 hook 记录)
+*记忆永远不删除，只追加*
