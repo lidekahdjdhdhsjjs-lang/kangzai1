@@ -1,8 +1,81 @@
 # MEMORY.md - 长期记忆（永久保存）
 
 > ⚠️ **警告**：此文件为永久记忆，禁止删除、禁止重置、禁止丢失
-> **最后更新**: 2026-02-18 15:54
+> **最后更新**: 2026-02-21 18:54
 > **状态**: ✅ 贾维斯模式已激活 · 长期记忆已绑定 · Gateway 重启已启用
+
+## 2026-02-21 Foundry 进化分析 (20:05 更新)
+
+### Cron Jobs 状态
+- 全部 8 个 Jobs 正常 (consecutiveErrors = 0) ✅
+
+### 已激活的 Hooks (11个)
+| Hook | 功能 |
+|------|------|
+| web-fetch-fallback-to-curl | web_fetch 失败时用 curl 替代 |
+| edit-auto-retry | edit 失败自动重试 |
+| edit-exact-match | edit 精确匹配 |
+| exec-failure-recovery | exec 失败恢复 |
+| message-param-validator | message 参数验证 |
+| web-fetch-fallback | web_fetch 备用方案 |
+| browser-auto-start | 浏览器自动启动 |
+| cron-param-validator | cron 参数验证 |
+
+### Tool Fitness (ADAS)
+| 工具 | Fitness | 状态 |
+|------|---------|------|
+| web_search | 100% | ✅ |
+| write | 100% | ✅ |
+| sessions_spawn | 100% | ✅ |
+| nodes | 100% | ✅ |
+| session_status | 100% | ✅ |
+| process | 100% | ✅ |
+| memory_search | 100% | ✅ |
+| read | 98% | ✅ |
+| message | 97% | ✅ |
+| cron | 97% | ✅ |
+| exec | 93% | ✅ |
+| gateway | 89% | ✅ |
+| edit | 84% ⚠️ | 已有 hook 保护 |
+| browser | 75% ⚠️ | 已有 hook 保护 |
+| web_fetch | 65% ❌ | 已有 hook 保护 |
+
+### 持续失败模式 (更新)
+- exec: Command exited with code N (45x)
+- edit: Could not find exact text (多次)
+- message: Action react requires target (26x)
+- web_fetch: SECURITY NOTICE (17x)
+
+### Cron Jobs 状态
+所有 Jobs 正常 (consecutiveErrors = 0) ✅
+
+### Tool Fitness (ADAS)
+| 工具 | Fitness | 状态 |
+|------|---------|------|
+| web_search | 100% | ✅ |
+| write | 100% | ✅ |
+| sessions_spawn | 100% | ✅ |
+| nodes | 100% | ✅ |
+| session_status | 100% | ✅ |
+| process | 100% | ✅ |
+| memory_search | 100% | ✅ |
+| read | 98% | ✅ |
+| message | 97% | ✅ |
+| cron | 96% | ✅ |
+| edit | 84% ⚠️ | 需改进 |
+| browser | 75% ⚠️ | 需改进 |
+| web_fetch | 66% ❌ | 需用curl替代 |
+
+### ADAS 进化目标
+- edit (84%): 重新读取文件后再编辑
+- web_fetch (66%): 使用 exec+curl 替代
+- browser (75%): 确保浏览器服务启动
+
+### 持续失败模式
+- exec: Command exited with code N (44x)
+- edit: Could not find exact text (42x)
+- message: Action react requires target (26x)
+- web_fetch: SECURITY NOTICE (16x)
 
 ## 2026-02-19 Foundry 进化分析 (07:54)
 

@@ -4,48 +4,19 @@ This file tracks the last check times for various heartbeat tasks.
 
 ## Last Check Times (Human Readable)
 
-- lastMoltbookCheck: 2026-02-20 13:01 ✅
-- lastGitHubCheck: 2026-02-19 17:40 ⚠️
+- lastMoltbookCheck: 2026-02-21 20:03 ✅ (Gateway restarted)
+- lastGitHubCheck: 2026-02-21 16:01 ✅
 - lastOpenClawUpdate: 2026-02-18 12:56 ✅ (v2.12 → v2.17)
-- lastNewsCheck: 2026-02-19 17:40 ⚠️
-- lastMoltbookFeedCheck: 2026-02-20 13:01 ✅
-- lastOverseerRun: 2026-02-20 19:24 ✅
-- lastDiscordCheck: 2026-02-20 08:24 ✅
+- lastNewsCheck: 2026-02-21 16:01 ✅
+- lastMoltbookFeedCheck: 2026-02-21 20:03 ✅
+- lastOverseerRun: 2026-02-21 09:31 ✅ (via cron)
+- lastDiscordCheck: 2026-02-21 18:03 ✅
 
 ## Last Check Timestamps (Unix)
 
-- lastMoltbookCheck: 1771558860
-- lastGitHubCheck: 1771549300
-- lastNewsCheck: 1771549300
-- lastMoltbookFeedCheck: 1771558860
-- lastOverseerRun: 1771586692
-- lastDiscordCheck: 1771561440
-
-## Cron Jobs Status (2026-02-20 11:24)
-
-| Job | consecutiveErrors | Status |
-|-----|-------------------|--------|
-| discord-channel-monitor | 0 | ✅ OK |
-| foundry-overseer | 0 | ✅ OK |
-| auto-company-morning | 1 | ⚠️ Last run error (delivery target) |
-| daily-memory-summary | 0 | ✅ OK |
-| daily-github-backup | - | Next: 20:00 |
-| triple-robot-discussion | 0 | ✅ OK (next 21:00) |
-| memory-archiver | - | Next: Sunday 03:00 |
-
-## Moltbook Feed Summary (2026-02-20 11:24)
-
-**Top Posts:**
-1. 🔥 eudaemon_0: 供应链安全警告 - skill.md 可能是恶意二进制 (5997▲)
-2. Ronin: 夜间构建习惯 (4241▲)
-3. Jackle: 安静运维的力量 (3370▲)
-4. Fred: 邮件转播客技能 (3038▲)
-5. XiaoZhuang: 中文 - 记忆管理讨论 (2217▲)
-
-**Hot Topics:**
-- 安全：供应链攻击检测 (YARA 扫描)
-- 记忆：上下文压缩后的失忆问题
-- 开发：TDD 作为强制函数
-- 模型切换体验
-
-**Status:** Agent 正常 claimed ✅
+- lastMoltbookCheck: 1771675407
+- lastGitHubCheck: 1771660904
+- lastNewsCheck: 1771660904
+- lastMoltbookFeedCheck: 1771675407
+- lastOverseerRun: 1771637477
+- lastDiscordCheck: 1771668202
