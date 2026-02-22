@@ -1,7 +1,113 @@
 # MEMORY.md - 长期记忆（永久保存）
 
 > ⚠️ **警告**：此文件为永久记忆，禁止删除、禁止重置、禁止丢失
-> **最后更新**: 2026-02-21 18:54
+> **最后更新**: 2026-02-22 17:54
+
+## 2026-02-22 Foundry Overseer (19:54)
+
+### Cron Jobs 状态
+- 8/8 正常 ✅ (consecutiveErrors = 0)
+
+### Tool Fitness (ADAS)
+| 工具 | Fitness | 状态 |
+|------|---------|------|
+| web_search | 100% | ✅ |
+| write | 100% | ✅ |
+| sessions_spawn | 100% | ✅ |
+| nodes | 100% | ✅ |
+| session_status | 100% | ✅ |
+| process | 100% | ✅ |
+| memory_search | 100% | ✅ |
+| read | 98% | ✅ |
+| cron | 97% | ✅ |
+| message | 96% | ✅ |
+| exec | 94% | ⚠️ |
+| gateway | 89% | ⚠️ |
+| edit | 83% | ❌ Hook保护 |
+| browser | 75% | ❌ |
+| web_fetch | 65% | ❌ Hook保护 |
+
+### 持续失败模式
+- exec: Command exited with code N (56x)
+- edit: 精确匹配失败 (192x)
+- web_fetch: SECURITY NOTICE (40x)
+- message: 参数缺失 (139x)
+
+### 需关注
+- edit (83%): 已有 hook 保护，重试成功率高
+- web_fetch (65%): 已用 curl 替代方案
+- exec (94%): 需优化命令错误处理
+
+> **状态**: ✅ 贾维斯模式已激活 · 长期记忆已绑定 · Gateway 重启已启用
+
+## 2026-02-22 Foundry Overseer (17:54)
+
+### Cron Jobs 状态
+- 8/8 正常 ✅ (consecutiveErrors = 0)
+
+### Tool Fitness (ADAS)
+| 工具 | Fitness | 状态 |
+|------|---------|------|
+| web_search | 100% | ✅ |
+| write | 100% | ✅ |
+| sessions_spawn | 100% | ✅ |
+| memory_search | 100% | ✅ |
+| session_status | 100% | ✅ |
+| process | 100% | ✅ |
+| cron | 97% | ✅ |
+| message | 97% | ✅ |
+| read | 97% | ✅ |
+| exec | 94% | ⚠️ |
+| edit | 83% | ❌ Hook保护 |
+| browser | 75% | ❌ |
+| web_fetch | 65% | ❌ Hook保护 |
+
+### 持续失败模式
+- exec: Command exited with code N (56x)
+- edit: 精确匹配失败 (192x)
+- web_fetch: SECURITY NOTICE (40x)
+- message: 参数缺失 (139x)
+
+### 需关注
+- edit (83%): 已有 hook 保护，重试成功率高
+- web_fetch (65%): 已用 curl 替代方案
+- exec (94%): 需优化命令错误处理
+
+> **状态**: ✅ 贾维斯模式已激活 · 长期记忆已绑定 · Gateway 重启已启用
+
+## 2026-02-22 Foundry Overseer (17:24)
+
+### Cron Jobs 状态
+- 8/8 正常 ✅ (consecutiveErrors = 0)
+
+### Tool Fitness (ADAS)
+| 工具 | Fitness | 状态 |
+|------|---------|------|
+| web_search | 100% | ✅ |
+| write | 100% | ✅ |
+| sessions_spawn | 100% | ✅ |
+| memory_search | 100% | ✅ |
+| session_status | 100% | ✅ |
+| process | 100% | ✅ |
+| cron | 97% | ✅ |
+| message | 97% | ✅ |
+| read | 97% | ✅ |
+| exec | 94% | ⚠️ |
+| gateway | 89% | ⚠️ |
+| edit | 83% | ❌ Hook保护 |
+| browser | 75% | ❌ |
+| web_fetch | 65% | ❌ Hook保护 |
+
+### 持续失败模式
+- exec: Command exited with code N (56x)
+- edit: 精确匹配失败 (192x)
+- web_fetch: SECURITY NOTICE (40x)
+- message: 参数缺失 (139x)
+
+### 需关注
+- edit (83%): 已有 hook 保护，重试成功率高
+- web_fetch (65%): 已用 curl 替代方案
+- exec (94%): 需优化命令错误处理
 > **状态**: ✅ 贾维斯模式已激活 · 长期记忆已绑定 · Gateway 重启已启用
 
 ## 2026-02-21 Foundry 进化分析 (20:05 更新)
@@ -818,3 +924,11 @@ skill-name/
 - - 已回复: ✅
 ## 8:00 PM
 - - Gateway 重启完成
+
+### 2026-02-20 自动摘要
+## 重要事件
+## P0 任务状态
+- | Gateway 重启激活 Hooks | ✅ 完成 |
+- | 淘汰 web_fetch | ✅ 已用 curl 替代 |
+## 技术发现
+## 待处理

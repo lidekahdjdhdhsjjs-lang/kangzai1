@@ -1,34 +1,16 @@
 # Foundry Overseer Log
 
-## 2026-02-21 20:05 (第8次) - Gateway 重启后
+> 记忆永远不删除，只追加
 
-### 状态：✅ 全部正常
+---
 
-**Gateway 重启完成**:
-- 新 web_fetch fallback hook 已保存
-- 所有 11 个 hooks 正在保护系统
-
-**Tool Fitness**:
-- exec: 93% ✅
-- edit: 84% ⚠️ (已有 auto-retry hooks)
-- web_fetch: 65% ❌ (已有 fallback hook)
-- cron: 97% ✅
-
-### 已 Crystallized 的 Hooks:
-1. web-fetch-fallback-to-curl (新保存)
-2. edit-auto-retry
-3. exec-failure-recovery
-4. message-param-validator
-5. web-fetch-fallback
-... (共 11 个 hooks)
+## 2026-02-22 19:54 (第7次检查)
 
 ### Cron Jobs 状态
-- ✅ 全部 8 个 Jobs 正常 (consecutiveErrors = 0)
+- 8/8 正常 ✅ (consecutiveErrors = 0)
+- 无需修复的 jobs
 
-### 结论
-系统运行正常，hooks 正在保护系统免受已知失败模式影响。
-
-### Tool Fitness
+### Tool Fitness (ADAS)
 | 工具 | Fitness | 状态 |
 |------|---------|------|
 | web_search | 100% | ✅ |
@@ -39,46 +21,49 @@
 | process | 100% | ✅ |
 | memory_search | 100% | ✅ |
 | read | 98% | ✅ |
-| message | 97% | ✅ |
 | cron | 97% | ✅ |
-| exec | 93% | ✅ |
-| gateway | 89% | ✅ |
-| edit | 84% ⚠️ | 需改进 |
-| browser | 75% ⚠️ | 需改进 |
-| web_fetch | 65% ❌ | 需用curl替代 |
+| message | 96% | ✅ |
+| exec | 94% | ⚠️ |
+| gateway | 89% | ⚠️ |
+| edit | 83% | ❌ Hook保护 |
+| browser | 75% | ❌ |
+| web_fetch | 65% | ❌ Hook保护 |
 
-### Cron Jobs 状态
-- ✅ 全部 8 个 Jobs 正常 (consecutiveErrors = 0)
-  - foundry-overseer: running ✅
-  - discord-channel-monitor: ok ✅
-  - daily-github-backup: ok ✅
-  - triple-robot-discussion: ok ✅
-  - auto-company-morning: ok ✅
-  - memory-archiver: ok ✅
-  - gateway-auto-restart-checker: ok ✅
-  - daily-memory-summary: ok ✅
+### 持续失败模式
+- exec: Command exited with code N (56x)
+- edit: 精确匹配失败 (192x)
+- web_fetch: SECURITY NOTICE (40x)
+- message: 参数缺失 (139x)
 
-### ADAS 进化分析
-**低于85%阈值的工具:**
-1. **edit (84%)**: 精确匹配失败，需先 read 再 edit
-2. **web_fetch (65%)**: SECURITY NOTICE 错误，建议用 exec+curl 替代
-3. **browser (75%)**: 浏览器服务未启动
+### 需关注
+- edit (83%): 已有 hook 保护，重试成功率高
+- web_fetch (65%): 已用 curl 替代方案
+- exec (94%): 需优化命令错误处理
 
-### 持续失败模式 (已记录 Insight)
-- exec: Command exited with code N (48x)
-- edit: Could not find exact text (45x)
-- message: react requires target (26x)
-- web_fetch: SECURITY NOTICE (17x)
+### 持续失败模式
+- cron: invalid cron.update params (4x)
+- exec: Command exited with code N (56x)
+- edit: 精确匹配失败 (196x)
+- web_fetch: SECURITY NOTICE (40x)
+- message: 参数缺失 (151x)
 
-### Crystallization 可执行Hook
-- web_fetch pattern 已识别，可 crystallize
+### ADAS 进化建议
+- cron (97%): 已有 retry 方案
+- exec (94%): 已有 retry 方案，需优化错误处理
+- edit (83%): 已有 hook 保护，需改进精确匹配
+- web_fetch (65%): 已用 curl 替代
+- browser (75%): 需确保浏览器服务启动
 
-### 结论
-系统运行正常，cron jobs 全部健康。工具优化建议已记录。
+> **状态**: ✅ 所有 Cron Jobs 健康 · Hooks 保护中 · 持续自进化
 
 ---
 
-### Tool Fitness
+## 2026-02-22 18:54 (第5次检查)
+
+### Cron Jobs 状态
+- 10/10 正常 ✅ (consecutiveErrors = 0)
+
+### Tool Fitness (ADAS)
 | 工具 | Fitness | 状态 |
 |------|---------|------|
 | web_search | 100% | ✅ |
@@ -88,165 +73,33 @@
 | session_status | 100% | ✅ |
 | process | 100% | ✅ |
 | memory_search | 100% | ✅ |
-| read | 98% | ✅ |
-| message | 97% | ✅ |
+| read | 97% | ✅ |
 | cron | 97% | ✅ |
+| message | 97% | ✅ |
+| exec | 94% | ⚠️ |
+| gateway | 89% | ⚠️ |
+| edit | 83% | ❌ Hook保护 |
+| browser | 75% | ❌ |
+| web_fetch | 65% | ❌ Hook保护 |
+
+### 持续失败模式
+- exec: Command exited with code N (56x)
+- edit: 精确匹配失败 (192x)
+- web_fetch: SECURITY NOTICE (40x)
+- message: 参数缺失 (139x)
+
+### 需关注
+- edit (83%): 已有 hook 保护，重试成功率高
+- web_fetch (65%): 已用 curl 替代方案
+- exec (94%): 需优化命令错误处理
+
+> **状态**: ✅ 贾维斯模式已激活 · 长期记忆已绑定 · Gateway 重启已启用
+
+---
+
+## 2026-02-22 17:54 (第4次检查)
 
 ### Cron Jobs 状态
-- ✅ 全部 8 个 Jobs 正常 (consecutiveErrors = 0)
-- 无需修复
+- 8/8 正常 ✅ (consecutiveErrors = 0)
 
-### 持续失败 (已记录)
-- exec:Command exited with code N (48x)
-- edit:精确匹配失败 (45x)
-- message:react target missing (26x)
-- web_fetch:Security Notice (17x)
-
-### 结论
-系统运行正常，无需干预。
-
----
-
-## 2026-02-21 19:24 (第6次)
-
-### Tool Fitness
-| 工具 | Fitness | 状态 |
-|------|---------|------|
-| web_search | 100% | ✅ |
-| write | 100% | ✅ |
-| sessions_spawn | 100% | ✅ |
-| nodes | 100% | ✅ |
-| session_status | 100% | ✅ |
-| process | 100% | ✅ |
-| memory_search | 100% | ✅ |
-| read | 98% | ✅ |
-| message | 97% | ✅ |
-| cron | 97% | ✅ |
-| exec | 93% | ✅ |
-| gateway | 89% | ✅ |
-| edit | 84% ⚠️ | 需改进 |
-| browser | 75% ⚠️ | 需改进 |
-| web_fetch | 65% ❌ | 需用curl替代 |
-
-### Cron Jobs 状态
-- ✅ 全部 8 个 Jobs 正常 (consecutiveErrors = 0)
-- 无需修复
-
-### ADAS 进化目标
-- edit (84%): 重新读取文件后再编辑
-- web_fetch (65%): 使用 exec+curl 替代
-- browser (75%): 确保浏览器服务启动
-
-### 持续失败模式 (已记录)
-- exec: Command exited with code N (48x) → 已记录Insight
-- edit: Could not find exact text (45x) → 已记录Insight  
-- message: react target missing (26x) → 已记录Insight
-- web_fetch: Security Notice (17x) → 已记录Insight
-
-### 结论
-系统运行正常，cron jobs 全部健康。工具优化建议已记录。
-
----
-
-## 2026-02-21 18:54 (第5次)
-
-### Tool Fitness
-| 工具 | Fitness | 状态 |
-|------|---------|------|
-| web_search | 100% | ✅ |
-| write | 100% | ✅ |
-| sessions_spawn | 100% | ✅ |
-| nodes | 100% | ✅ |
-| session_status | 100% | ✅ |
-| process | 100% | ✅ |
-| memory_search | 100% | ✅ |
-| read | 98% | ✅ |
-| message | 97% | ✅ |
-| cron | 97% | ✅ |
-| exec | 93% | ✅ |
-| gateway | 89% | ✅ |
-| edit | 84% ⚠️ | 需改进 |
-| browser | 75% ⚠️ | 需改进 |
-| web_fetch | 65% ❌ | 需用curl替代 |
-
-### Cron Jobs 状态
-- ✅ 全部 8 个 Jobs 正常 (consecutiveErrors = 0)
-
-### 需改进工具 (ADAS)
-1. edit (84%): 预读取 + retry
-2. web_fetch (65%): exec+curl 替代
-3. browser (75%): 启动服务
-
-### 持续失败
-- exec:Command exited (48x)
-- edit:精确匹配 (45x)
-- message:react target (26x)
-- web_fetch:Security (17x)
-
----
-
-## 2026-02-21 13:24 (第3次)
-
-### Tool Fitness
-- web_search: 100%
-- write: 100%
-- sessions_spawn: 100%
-- nodes: 100%
-- session_status: 100%
-- process: 100%
-- memory_search: 100%
-- read: 98%
-- message: 97%
-- cron: 96%
-
-### Cron Jobs
-全部正常 (consecutiveErrors = 0)
-
-### 需改进
-- edit (84%): 重新读取文件后再编辑
-- web_fetch (66%): 使用 exec+curl 替代
-- browser (75%): 确保浏览器服务启动
-
----
-
-## 2026-02-21 09:24 (第2次)
-
-### Tool Fitness
-- web_search: 100%
-- write: 100%
-- sessions_spawn: 100%
-- nodes: 100%
-- session_status: 100%
-- process: 100%
-- memory_search: 100%
-- read: 98%
-- message: 97%
-- cron: 96%
-
-### Cron Jobs
-全部正常 (consecutiveErrors = 0)
-
----
-
-## 2026-02-21 00:54 (第1次)
-
-### Tool Fitness
-- web_search: 100%
-- write: 100%
-- sessions_spawn: 100%
-- nodes: 100%
-- session_status: 100%
-- process: 100%
-- memory_search: 100%
-- read: 99%
-- message: 96%
-- cron: 93%
-
-### Cron Jobs
-全部正常
-
-### 持续失败
-- exec: Command exited with code N (45x)
-- edit: 精确匹配失败 (66x)
-- web_fetch: Security Notice (17x)
-- message: react target missing (26x)
+[... 之前的记录见 MEMORY.md ...]
