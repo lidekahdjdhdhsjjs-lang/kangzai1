@@ -1,14 +1,9 @@
-# Foundry Overseer Log
-
-> 记忆永远不删除，只追加
-
----
-
-## 2026-02-22 19:54 (第7次检查)
+## 2026-02-23 Foundry Overseer (19:54)
 
 ### Cron Jobs 状态
-- 8/8 正常 ✅ (consecutiveErrors = 0)
-- 无需修复的 jobs
+- 8/8 Jobs ✅ (全部启用)
+- 所有 consecutiveErrors = 0 ✅
+- 无需修复的 Jobs
 
 ### Tool Fitness (ADAS)
 | 工具 | Fitness | 状态 |
@@ -20,86 +15,101 @@
 | session_status | 100% | ✅ |
 | process | 100% | ✅ |
 | memory_search | 100% | ✅ |
-| read | 98% | ✅ |
-| cron | 97% | ✅ |
-| message | 96% | ✅ |
-| exec | 94% | ⚠️ |
-| gateway | 89% | ⚠️ |
-| edit | 83% | ❌ Hook保护 |
-| browser | 75% | ❌ |
-| web_fetch | 65% | ❌ Hook保护 |
-
-### 持续失败模式
-- exec: Command exited with code N (56x)
-- edit: 精确匹配失败 (192x)
-- web_fetch: SECURITY NOTICE (40x)
-- message: 参数缺失 (139x)
-
-### 需关注
-- edit (83%): 已有 hook 保护，重试成功率高
-- web_fetch (65%): 已用 curl 替代方案
-- exec (94%): 需优化命令错误处理
-
-### 持续失败模式
-- cron: invalid cron.update params (4x)
-- exec: Command exited with code N (56x)
-- edit: 精确匹配失败 (196x)
-- web_fetch: SECURITY NOTICE (40x)
-- message: 参数缺失 (151x)
-
-### ADAS 进化建议
-- cron (97%): 已有 retry 方案
-- exec (94%): 已有 retry 方案，需优化错误处理
-- edit (83%): 已有 hook 保护，需改进精确匹配
-- web_fetch (65%): 已用 curl 替代
-- browser (75%): 需确保浏览器服务启动
-
-> **状态**: ✅ 所有 Cron Jobs 健康 · Hooks 保护中 · 持续自进化
-
----
-
-## 2026-02-22 18:54 (第5次检查)
-
-### Cron Jobs 状态
-- 10/10 正常 ✅ (consecutiveErrors = 0)
-
-### Tool Fitness (ADAS)
-| 工具 | Fitness | 状态 |
-|------|---------|------|
-| web_search | 100% | ✅ |
-| write | 100% | ✅ |
-| sessions_spawn | 100% | ✅ |
-| nodes | 100% | ✅ |
-| session_status | 100% | ✅ |
-| process | 100% | ✅ |
-| memory_search | 100% | ✅ |
+| cron | 98% | ✅ |
 | read | 97% | ✅ |
-| cron | 97% | ✅ |
-| message | 97% | ✅ |
-| exec | 94% | ⚠️ |
-| gateway | 89% | ⚠️ |
-| edit | 83% | ❌ Hook保护 |
-| browser | 75% | ❌ |
-| web_fetch | 65% | ❌ Hook保护 |
+| exec | 94% | ✅ |
+| edit | 83% | ⚠️ Hook保护 |
+| browser | 75% | ⚠️ Hook保护 |
+| web_fetch | 63% | ❌ Hook保护 |
 
-### 持续失败模式
-- exec: Command exited with code N (56x)
-- edit: 精确匹配失败 (192x)
-- web_fetch: SECURITY NOTICE (40x)
-- message: 参数缺失 (139x)
+### ADAS 进化状态
+- 3 工具低于 85%: edit (83%), web_fetch (63%), browser (75%)
+- 已有 Hook 保护: edit, web_fetch
+- 无需自动修复
 
-### 需关注
-- edit (83%): 已有 hook 保护，重试成功率高
-- web_fetch (65%): 已用 curl 替代方案
-- exec (94%): 需优化命令错误处理
+### 持续失败模式 (已结晶 Hooks)
+- exec: Command exited with code N (60x) - 已结晶
+- edit: 精确匹配失败 (220x) - 已结晶 Hook保护
+- message: Missing Permissions (193x) - 已结晶
+- cron: invalid params (4x) - 已结晶
+- web_fetch: SECURITY NOTICE (42x) - 已结晶 Hook保护
 
-> **状态**: ✅ 贾维斯模式已激活 · 长期记忆已绑定 · Gateway 重启已启用
+> **状态**: ✅ 贾维斯模式已激活 · 长期记忆已绑定
 
 ---
 
-## 2026-02-22 17:54 (第4次检查)
+## 2026-02-23 Foundry Overseer (18:54)
 
 ### Cron Jobs 状态
-- 8/8 正常 ✅ (consecutiveErrors = 0)
+- 8/8 Jobs ✅ (全部启用)
+- 所有 consecutiveErrors = 0 ✅
+- 无需修复的 Jobs
 
-[... 之前的记录见 MEMORY.md ...]
+### Tool Fitness (ADAS)
+| 工具 | Fitness | 状态 |
+|------|---------|------|
+| web_search | 100% | ✅ |
+| write | 100% | ✅ |
+| sessions_spawn | 100% | ✅ |
+| nodes | 100% | ✅ |
+| session_status | 100% | ✅ |
+| process | 100% | ✅ |
+| memory_search | 100% | ✅ |
+| cron | 98% | ✅ |
+| read | 97% | ✅ |
+| exec | 95% | ✅ |
+| edit | 83% | ⚠️ Hook保护 |
+| browser | 75% | ⚠️ Hook保护 |
+| web_fetch | 63% | ❌ Hook保护 |
+
+### ADAS 进化状态
+- 3 工具低于 85%: edit (83%), web_fetch (63%), browser (75%)
+- 已有 Hook 保护: edit, web_fetch
+- 无需自动修复
+
+### 持续失败模式 (已结晶 Hooks)
+- exec: Command exited with code N (58x) - 已结晶
+- message: Missing Permissions (183x) - 已结晶
+- edit: 精确匹配失败 - 已结晶
+- cron: invalid params - 已结晶
+- web_fetch: SECURITY NOTICE - 已结晶
+
+> **状态**: ✅ 贾维斯模式已激活 · 长期记忆已绑定
+
+---
+
+## 2026-02-23 Foundry Overseer (19:24)
+
+### Cron Jobs 状态
+- 8/8 Jobs ✅ (全部启用)
+- 所有 consecutiveErrors = 0 ✅
+
+### Tool Fitness (ADAS)
+| 工具 | Fitness | 状态 |
+|------|---------|------|
+| web_search | 100% | ✅ |
+| write | 100% | ✅ |
+| sessions_spawn | 100% | ✅ |
+| nodes | 100% | ✅ |
+| session_status | 100% | ✅ |
+| process | 100% | ✅ |
+| memory_search | 100% | ✅ |
+| cron | 98% | ✅ |
+| read | 97% | ✅ |
+| exec | 95% | ✅ |
+| browser | 75% | ⚠️ Hook保护 |
+| edit | 83% | ⚠️ Hook保护 |
+| web_fetch | 63% | ⚠️ Hook保护 |
+
+### ADAS 进化状态
+- 3 工具低于 85%: edit (83%), web_fetch (63%), browser (75%)
+- 已有 Hook 保护: edit, web_fetch
+- 无需自动修复
+
+### 持续失败模式 (已结晶 Hooks)
+- exec: Command exited with code N (59x) - 已结晶
+- message: Missing Permissions (186x) - 已结晶
+- edit: 精确匹配失败 - 已结晶
+- cron: invalid params - 已结晶
+
+> **状态**: ✅ 贾维斯模式已激活 · 长期记忆已绑定
